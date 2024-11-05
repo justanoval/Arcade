@@ -1,6 +1,0 @@
-{
-  "events.game_started": "Game Started",
-  "events.game_over": "Game Over",
-  "sidebar.title": "Game Info",
-  "sidebar.time_remaining": "Time Left: %s"
-}
