@@ -1,2 +1,2 @@
-# Games
- A simple server-side games framework for Minecraft.
+# Arcade
+A simple server-side games framework for Minecraft.
