@@ -1,0 +1,28 @@
+{
+  "name": "Mob Swap",
+  "type": "arcade:collaborative",
+  "max_players": 10,
+  "teams": {},
+  "win_condition": {},
+  "lose_condition": {},
+  "time": {
+    "type": "arcade:countdown",
+    "length": "144000"
+  },
+  "components": [
+    {
+      "id": "arcade:announcements"
+    },
+    {
+      "id": "arcade:sidebar",
+      "title": "%player:game name%",
+      "lines": [
+        "Time Left: %player:game time_remaining%"
+      ]
+    },
+    {
+      "id": "arcade:mob_swap",
+      "range": 256
+    }
+  ]
+}
