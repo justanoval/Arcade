@@ -23,7 +23,8 @@
 hs_err_pid*
 replay_pid*
 
-build/
-run/
-.gradle/
-.idea/
+build/*
+run/*
+.gradle/*
+.idea/*
+.kotlin/*
