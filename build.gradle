@@ -40,6 +40,9 @@ dependencies {
 	// Other libraries / APIs
 	modImplementation include("eu.pb4:sidebar-api:${project.sidebar_api_version}")
 	modImplementation(include("eu.pb4:placeholder-api:${project.tp_api_version}"))
+
+	implementation("org.jetbrains.kotlin:kotlin-scripting-jsr223:1.9.10")
+	implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.10")
 }
 
 processResources {

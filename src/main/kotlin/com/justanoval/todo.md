@@ -1,6 +1,6 @@
 - [ ] Set up a bunch of placeholders
   - [ ] Have them work with game instances
-- [ ] Game pause command
+- [ ] When we look at each other in an infinite loop it causes the recursive loop
 
 Todo:
 - [ ] Better game list command

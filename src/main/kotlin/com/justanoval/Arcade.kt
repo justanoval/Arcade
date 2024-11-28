@@ -103,7 +103,13 @@ object Arcade : ModInitializer {
 				name = "Game"
 			}
 
-			GameRegistry.register(GameFactory(id, server, name, components))
+			var length = settings.getOrDefault("length", null)
+			if (length !is Double) {
+				logger.warn("There was an issue creating game $id: \"length\" must be a long.")
+				length = 0.0
+			}
+
+			GameRegistry.register(GameFactory(id, server, name, length.toInt(), components))
 		}
 	}
 

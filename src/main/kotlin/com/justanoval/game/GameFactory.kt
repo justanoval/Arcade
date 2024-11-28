@@ -10,13 +10,13 @@ class GameFactory(
     val id: String,
     val server: MinecraftServer,
     val name: String = "Default",
+    var length: Int = 0,
     val components: List<GameComponent>
 ) {
 
     val instanceCreated = ModEvent<Game>()
 
     private var team: Team? = null
-    private var length: Int = 0
     private var count: Int = 0
 
     fun setTeam(team: Team): GameFactory {
@@ -29,7 +29,7 @@ class GameFactory(
         return this
     }
 
-    fun build(): Game? {
+    fun build(): Game {
         if (team == null) {
             throw CommandException("Invalid or null team.")
         }

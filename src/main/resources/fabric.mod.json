@@ -13,7 +13,7 @@
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/arcade/icon.png",
-	"environment": "*",
+	"environment": "server",
 	"entrypoints": {
 		"main": [
 			{
@@ -23,11 +23,7 @@
 		]
 	},
 	"mixins": [
-		"arcade.mixins.json",
-		{
-			"config": "arcade.client.mixins.json",
-			"environment": "client"
-		}
+		"arcade.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.7",

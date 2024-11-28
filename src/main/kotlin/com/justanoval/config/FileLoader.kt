@@ -90,6 +90,18 @@ object FileLoader {
         }
     }
 
+    fun getFiles(path: String): List<File>? {
+        confirmDirectory(mainFolder)
+
+        try {
+            return mainFolder.resolve(path).toFile().listFiles()?.filter { f -> f.isFile }
+        } catch (e: Exception) {
+            Arcade.logger.warn("Couldn't get file from path: $path")
+            Arcade.logger.warn(e.toString())
+            throw RuntimeException(e)
+        }
+    }
+
     // JSON
 
     fun loadJson(file: File): Map<String, Any?> {

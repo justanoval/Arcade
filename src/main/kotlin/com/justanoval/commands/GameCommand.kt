@@ -24,20 +24,18 @@ object GameCommand : Command("game") {
         source: ServerCommandSource,
         @Suggestion("arcade:games")
         game: GameFactory,
-        length: Int,
         @Suggestion("arcade:teams")
-        team: Team
+        team: Team,
+        length: Int = -1,
     ): Boolean {
-        if (length <= 0) return error(source, "Invalid game length.")
-
         try {
-            val instance: Game = game
-                .setTeam(team)
-                .setLength(length)
-                .build() ?: return error(
-                source,
-                "Invalid game parameters."
-            )
+            var builder: GameFactory = game.setTeam(team)
+
+            if (length > 0L) {
+                builder = builder.setLength(length)
+            }
+
+            val instance: Game = builder.build()
 
             instance.start()
 
